@@ -67,7 +67,6 @@
 *.gls
 
 # hyperref
-*.brf
 
 # listings
 *.lol
