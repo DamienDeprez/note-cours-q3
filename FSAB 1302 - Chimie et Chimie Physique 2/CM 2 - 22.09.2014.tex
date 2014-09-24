@@ -1,0 +1,98 @@
+\documentclass{report}
+
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+
+
+
+
+\begin{document}
+\title {FSAB 1302 - Chimie et Chimie Physique 2 - CM2}
+\date{22/09/2014}
+\author{Damien Deprez}
+
+\maketitle
+\tableofcontents
+
+\chapter{Les gaz parfait}
+\section{Théorie de Bernoulli}
+
+Sur base d'une intuition, on peu exprimer la pression $p=\frac{1}{3}\rho \bar{c^2}$
+$p=\frac{1}{3} \sum{}{}{n_i*m_i*\bar{c^2}}=\frac{1}{3}(\rho_1\bar{c_1^2}+...+\rho_i\bar{c_i^2})$
+
+\section{Loi de Boyle}
+$pV=cst=f_1(m,T) => V=\frac{f_1(m,T)}{p}$
+\section{Loi de Charles}
+$\frac{V}{T}=cst=f_2(m,p) =>  V=Tf_2(m,p)$\\
+$\frac{pV}{T}=f_3(m)=\frac{f_1(m,T)}{T}=pf_2(m,p)$
+$$pV=nRT$$
+\section{Loi de Boyle et Charles et Hypothèse d'Avogadro}
+$pV=nRT=nN_Ak_BT=Nk_BT$
+$p=\frac{1}{3}\frac{mN}{V}\bar{c^2}=>pV=\frac{1}{3}mN\bar{c^2}$
+$$\frac{1}{2}m\bar{c^2}=\frac{3}{2}k_BT$$
+De cette relation, on remarque que le Kelvin ne peut pas être négatif. Il est donc borné (car m>0). Si l'énergie cinétique est nulle, la température est nulle $=>$ Définition du Kelvin\\
+!!! La théorie des gaz parfaits n'est valable uniquement à faible pression !!!
+
+\chapter{Distribution de Maxwell}
+\section{Hypothèse}
+\begin{itemize}
+\item le milieux gazeux est homogène(pas dépendance à la position)
+\item le milieu est isotrope (pas dépendance à la direction)
+\item il existe une distribution de la vitesse (au sens statistique)
+\item les propriétés macroscopique reflètent 
+\end{itemize}
+\section{Distribution de la vitesse en 1D et en 3D}
+%insérer graphe des notes
+Si on dérive la fonction mathématique de la distribution de vitesse, on obtient une courbe de Gauss.
+\subsection{Notation}
+$\phi$=forme mathématique de la distribution de vitesse\\
+$f=\frac{d\phi}{dc}$=dérivée de la forme math de la distribution de vitesse par rapport à la vitesse
+\subsection{espace de Vitesse}
+$$\int_{-\infty}^{\infty}{\int_{-\infty}^{\infty}{\int_{-\infty}^{\infty}{f_1(c_1)f_2(c_2)f_3(c_3)dc_1dc_2dc_3}}}=1$$
+Si le milieu est isotrope
+$$F(c)=f_1(c_1)f_2(c_2)f_3(c_3)$$
+$$\ln{F(c)}=\ln{f_1(c_1)}+\ln{(f_2(c_2)+f_3(c_3))}$$
+$$\frac{\delta\ln{F(c)}}{\delta c_1}_{c_2,c_3}=\frac{d\ln{f_1(c_1)}}{dc_1}$$
+$$\frac{d \ln{F(c)}}{dc}\frac{\delta c}{\delta c_1}_{c_2,c_3}=\frac{d\ln{f_1(c_1)}}{dc_1}$$
+$$\frac{1}{c} \frac{d\ln{F(c)}}{dc}=\frac{1}{c_1}\frac{d\ln{f_1(c_1)}}{dc_1}=\frac{1}{c_2}\frac{d\ln{f_2(c_2)}}{dc_2}=\frac{1}{c_3}\frac{d\ln{f_3(c_3)}}{dc_3}=-\gamma$$
+$$f_1(c_1)=Ae^{\frac{-\gamma}{e}c_1^2}$$
+Comme c'est valable pour $c_1$, $c_2$, $c_3$, les trois variables sont indépendantes. Dès lors, cela doit être égal à une constante (négative ou positive ?). Physiquement, on ne sait pas prouver que cela vaut $-\gamma$ avec $\gamma \in R^{e^{+}}$.
+
+Il nous reste à trouver $A$ et $\gamma$
+Propriété:
+\begin{itemize}
+\item $\int_{-\infty}^{\infty}{f_1(c_1) dc_1}=1$
+\item $\frac{1}{2} m\bar{c^2}=\frac{3}{2}k_BT$
+\end{itemize}
+Or $\int_{-\infty}^{\infty}{e^{-ax^2}dx}=\sqrt{\frac{\Pi}{a}}$\\
+$\int_{-\infty}^{\infty}{x^2e^{-ax^2}dx}=\frac{1}{2a}\sqrt{\frac{\Pi}{a}}$
+$$\bar{c_1^2}=\int_{-\infty}^{\infty}{c_1^2f_1(c_1)dc_1)}$$
+$$=>f(c_1)=\sqrt{\frac{m}{2\Pi k_B T}}e^{-\frac{mc_1^2}{2k_BT}}$$
+$$F(c)dc=f_1(c_1)f_2(c_2)f_3(c_3)dc_1dc_2dc_3 = 4\Pi c^2\frac{Mm}{2\Pi}^{\frac{3}{2}}e^{-\frac{Mm}{2RT}c^2}$$
+avec $dc_1dc_2dc_3=4\Pi c^2 dc$
+Valeur intéressante :
+\begin{itemize}
+\item vitesse la plus probable ($c_p=\sqrt{\frac{2RT}{Mm}}$)
+\item vitesse moyenne ($\bar{c}=\sqrt{\frac{4}{\Pi}}c_p$)
+\item vitesse moyenne quadratique ($\sqrt{\bar{c^2}}=\sqrt{\frac{3}{2}}c_p$)
+\end{itemize}
+On peu mesurer la vitesse des molécules et cela a permis de vérifier la distribution de vitesse
+\chapter{L'effusion d'un gaz}
+\section{Définition}
+c'est le passage des molécules au travers d'une section de petite taille.
+Cela se fait sans choc entre les molécules près de la paroi et pas de choc avec la paroi. => effusion est à comparer à la diffusion qui implique des chocs. 
+Le taux de collision avec la surface de passage donne le débit de molécules
+$$\frac{dN_e}{dt}=\frac{N}{V}A\int_{0}^{\infty}{c_xf(c_x)dc_x}=\frac{N}{V}A \frac{k_BT}{2\Pi m}^{0,5}=A\frac{p}{(2\Pi k_B Tm)^{0,5}}$$
+A température fixée, les molécules les plus légères effusent plus rapidement, elles passent plus facilement. C'est donc un moyen de filtrer mais imparfait.
+$$\frac{dN_1/dt}{dN_2/dt}=\sqrt{\frac{Mm_2}{Mm_1}}$$
+C'est basé sur la distribution de vitesse d'un gaz
+ 
+\chapter{Limite de la Théorie de Gaz parfait}
+\section{Énergie d'un gaz monoatomique}
+Elle est prédite correctement. Lorsque l'on calcule la capacité calorifique pour des gaz polyatomique, ce n'est plus le cas. La capacité calorifique varie avec la température.
+On va devoir rajouter des possibilités de stocker l'énergie dans des degrés de liberté (translation(3) + rotation(3) + vibration).
+Capacité calorifique = $\sum$ddl/2.
+Molécule diatomique à température ambiante : $C_{V,m}=\frac{5}{2}R [J/mole*K]$
+Molécule monoatomique à température ambiante : $C_{V,m}=\frac{3}{2}R$
+\end{document}
